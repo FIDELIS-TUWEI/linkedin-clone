@@ -72,3 +72,11 @@ div.transaction div.description {
 div.right {
     text-align: right;
 }
+
+div.price.green {
+    color: #1c1;
+}
+
+div.price.red {
+    color: #c11;
+}
