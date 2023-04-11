@@ -60,3 +60,15 @@ div.transaction {
     padding: 5px 0;
 }
 
+div.transaction div.name {
+    font-size: 1.2rem;
+}
+
+div.transaction div.description {
+    font-size: .7rem;
+    color: #888;
+}
+
+div.right {
+    text-align: right;
+}
