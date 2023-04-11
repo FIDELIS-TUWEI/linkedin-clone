@@ -25,29 +25,29 @@ function App() {
               <div className="description">It was time for new Tv</div>
             </div>
             <div className="right">
-              <div className="price">$500</div>
+              <div className="price red">-$500</div>
               <div className="datetime">2022-12-18 15:45</div>
             </div>
           </div>
 
           <div className="transaction">
             <div className="left">
-              <div className="name">New Samsung Tv</div>
+              <div className="name">Gig Job new website</div>
               <div className="description">It was time for new Tv</div>
             </div>
             <div className="right">
-              <div className="price">$500</div>
+              <div className="price">+$400</div>
               <div className="datetime">2022-12-18 15:45</div>
             </div>
           </div>
 
           <div className="transaction">
             <div className="left">
-              <div className="name">New Samsung Tv</div>
+              <div className="name">Iphone</div>
               <div className="description">It was time for new Tv</div>
             </div>
             <div className="right">
-              <div className="price">$500</div>
+              <div className="price red">-$900</div>
               <div className="datetime">2022-12-18 15:45</div>
             </div>
           </div>
