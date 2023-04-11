@@ -47,5 +47,16 @@ form button {
     border: 0;
     border-radius: 5px;
     padding: 5px;
+    background-color: #ddd;
+}
+
+div.transactions {
+    margin-top: 5px;
+}
+
+div.transaction {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
 }
 
