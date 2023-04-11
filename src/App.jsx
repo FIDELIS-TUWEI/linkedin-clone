@@ -36,7 +36,7 @@ function App() {
               <div className="description">It was time for new Tv</div>
             </div>
             <div className="right">
-              <div className="price">+$400</div>
+              <div className="price green">+$400</div>
               <div className="datetime">2022-12-18 15:45</div>
             </div>
           </div>
