@@ -5,7 +5,7 @@ function App() {
 
   // useState
   const [name, setName] = useState('');
-  const [datetime, setDateTime] = useState('');
+  const [datetime, setDatetime] = useState('');
   const [description, setDescription] = useState('');
 
   return (
@@ -16,14 +16,21 @@ function App() {
         <div className='basic'>
           <input type="text" 
               value={name}
-              onChange={e => setName(e.target.value)}
-              placeholder={'+200 new samsung tv'} 
+            onChange={e => setName(e.target.value)}
+            placeholder={'+200 new samsung tv'} 
           />
-          <input type="datetime-local"/>
+          <input type="datetime-local" 
+            value={datetime} 
+            onChange={e => setDatetime(e.target.value)}
+          />
         </div>
 
         <div className='description'>
-          <input type="text" placeholder={'description'} />
+          <input type="text" 
+            placeholder={'description'}
+            value={description}
+            onChange={e => setDescription(e.target.value)}
+          />
         </div>
 
         <button type='submit'>Add new transaction</button>
