@@ -1,6 +1,12 @@
+import { useState } from 'react'
 import './App.css'
 
 function App() {
+
+  // useState
+  const [name, setName] = useState('');
+  const [datetime, setDateTime] = useState('');
+  const [description, setDescription] = useState('');
 
   return (
     <main className="App">
@@ -8,7 +14,11 @@ function App() {
 
       <form>
         <div className='basic'>
-          <input type="text" placeholder={'+200 new samsung tv'} />
+          <input type="text" 
+              value={name}
+              onChange={e => setName(e.target.value)}
+              placeholder={'+200 new samsung tv'} 
+          />
           <input type="datetime-local"/>
         </div>
 
