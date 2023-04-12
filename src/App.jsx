@@ -8,11 +8,16 @@ function App() {
   const [datetime, setDatetime] = useState('');
   const [description, setDescription] = useState('');
 
+  // handle submit function
+  const addNewTransaction = () => {
+    e.preventDefault();
+  }
+
   return (
     <main className="App">
       <h1>$400 <span>.00</span></h1>
 
-      <form>
+      <form onSubmit={addNewTransaction}>
         <div className='basic'>
           <input type="text" 
               value={name}
