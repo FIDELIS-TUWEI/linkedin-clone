@@ -1,10 +1,10 @@
 import { supabase } from "../utils/supabase"
 
-export default function Home({ lessons }) {
-  console.log({ lessons });
+export default function Home({ lesson }) {
+  console.log({ lesson });
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      {lessons?.map((lesson) => (
+      {lesson?.map((lesson) => (
         <p key={lesson.id}>{lesson.title}</p>
       ))}
     </main>
@@ -12,13 +12,13 @@ export default function Home({ lessons }) {
 }
 
 export const getStaticProps = async () => {
-  const { data: lessons, error } = await supabase
+  const { data: lesson } = await supabase
     .from("lesson")
     .select("*")
 
   return {
     props: {
-      lessons,
+      lesson,
     },
   };
 };
