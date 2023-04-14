@@ -12,7 +12,9 @@ export default function Home({ lessons }) {
 }
 
 export const getStaticProps = async () => {
-  const { data: lessons } = await supabase.from("lesson").select("*")
+  const { data: lessons, error } = await supabase
+    .from("lesson")
+    .select("*")
 
   return {
     props: {
