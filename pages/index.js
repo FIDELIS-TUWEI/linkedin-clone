@@ -1,24 +1,29 @@
 import { supabase } from "../utils/supabase"
+import Link from "next/link";
 
-export default function Home({ lesson }) {
-  console.log({ lesson });
+export default function Home({ test }) {
+  console.log({ test });
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      {lesson?.map((lesson) => (
-        <p key={lesson.id}>{lesson.title}</p>
+    <main className="w-full max-w-3xl mx-auto my-16 px-2">
+      {test?.map((test) => (
+        <Link key={test.id} href={`/${test.id}`}>
+          <a className="p-8 h-40 mb-4 rounded shadow text-xl flex">
+            {test.description}
+          </a>
+          </Link>
       ))}
     </main>
   )
 }
 
 export const getStaticProps = async () => {
-  const { data: lesson } = await supabase
-    .from("lesson")
+  const { data: test } = await supabase
+    .from("test")
     .select("*")
 
   return {
     props: {
-      lesson,
+      test,
     },
   };
 };
