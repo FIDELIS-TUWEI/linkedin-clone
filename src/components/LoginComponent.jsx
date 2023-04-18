@@ -8,7 +8,14 @@ const LoginComponent = () => {
 
     //function call
     const login = () => {
-       LoginAPI(credentials.email, credentials.password);
+        try {
+            let res = LoginAPI(credentials.email, credentials.password);
+            console.log(res)
+        }
+        catch (err) {
+            console.log(err)
+        }
+       
     }
     return ( 
         <div className='login-wrapper'>
