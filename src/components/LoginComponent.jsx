@@ -10,6 +10,7 @@ const LoginComponent = () => {
     return ( 
         <div>
             <h1>Login Component</h1>
+            <input className="common-input" placeholder="Enter your Email" />
             <button onClick={login} className='login-btn'>Login to LinkedIn</button>
         </div>
      );
