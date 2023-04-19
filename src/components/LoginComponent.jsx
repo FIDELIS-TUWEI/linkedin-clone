@@ -20,6 +20,8 @@ const LoginComponent = () => {
     return ( 
         <div className='login-wrapper'>
             <img src={LinkedinLogo} alt='' className='linkedin-logo' />
+
+            <div className='login-wrapper-inner'>
             <h1 className='heading'>Sign in</h1>
             <p className='sub-heading'>Stay updated on your professional world</p>
             
@@ -42,6 +44,8 @@ const LoginComponent = () => {
                 />
             </div>
                 <button onClick={login} className='login-btn'>Login to LinkedIn</button>
+            </div>
+            
         </div>
      );
 }
