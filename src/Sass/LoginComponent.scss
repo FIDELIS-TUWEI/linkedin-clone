@@ -4,10 +4,30 @@
     cursor: pointer;
     background-color: #212121;
     color: #fff;
+    margin-top: 20px;
 }
 
 .common-input {
     display: flex;
     flex-direction: column;
     margin: 0.7rem;
+}
+
+.login-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    height: 50vh;
+}
+
+.auth-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+::placeholder {
+    color: white;
 }
