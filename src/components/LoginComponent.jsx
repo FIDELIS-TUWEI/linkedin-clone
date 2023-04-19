@@ -20,8 +20,9 @@ const LoginComponent = () => {
     return ( 
         <div className='login-wrapper'>
             <img src={LinkedinLogo} alt='' className='linkedin-logo' />
-            {/*<h1>Login Component</h1>
-            <div className='auth-inputs'>
+            <h1>Sign in</h1>
+            
+            {/*<div className='auth-inputs'>
                 <input
                     onChange={(e) => 
                         setCredentials({...credentials, email: e.target.value})
