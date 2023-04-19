@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import {LoginAPI} from '../api/AuthAPI';
+import { RegisterAPI } from '../api/AuthAPI';
 import '../Sass/LoginComponent.scss';
 
 const LoginComponent = () => {
@@ -7,15 +7,14 @@ const LoginComponent = () => {
     const [credentials, setCredentials] = useState();
 
     //function call
-    const login = () => {
+    const login = async () => {
         try {
-            let res = LoginAPI(credentials.email, credentials.password);
-            console.log(res)
+            let res = await RegisterAPI(credentials.email, credentials.password);
+            console.log(res?.user)
         }
         catch (err) {
             console.log(err)
-        }
-       
+        }  
     }
     return ( 
         <div className='login-wrapper'>
@@ -30,7 +29,7 @@ const LoginComponent = () => {
                 />
                 <input
                     onChange={(e) =>
-                        setCredentials({...credentials, email: e.target.value})
+                        setCredentials({...credentials, password: e.target.value})
                     }
                     className="common-input" 
                     placeholder="Enter your Password" 
