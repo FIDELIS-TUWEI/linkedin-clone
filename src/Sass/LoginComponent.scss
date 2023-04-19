@@ -1,20 +1,46 @@
-.login-wrapper {
+bpody {
+    margin: 0;
+    padding: 0;
+}
 
+.login-wrapper {
+    .heading {
+        margin-left: 200px;
+        font-family: system-ui;
+        font-weight: 500;
+        color: rgba(0,0,0,0.9);
+    }
+
+    .sub-heading {
+        margin-left: 200px;
+        margin-top: -20px;
+        font-family: system-ui;
+    }
 }
 
 .auth-inputs {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 300px;
+    margin-left: 200px;
 
     .common-input {
-        display: flex;
-        flex-direction: column;
-        margin: 0.7rem;
+        height: 30px;
+        padding: 10px;
+        background-color: #fff;
+        outline: none;
+        border: 1px solid #212121;
+        border-radius: 3px;
+    }
+
+    .common-input:focus {
+        outline: 1px solid rgb(77,77,196);
     }
 
     ::placeholder {
-        color: white;
+        font-family: system-ui;
+        font-size: 16px;
     }
 }
 

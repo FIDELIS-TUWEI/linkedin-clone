@@ -20,25 +20,28 @@ const LoginComponent = () => {
     return ( 
         <div className='login-wrapper'>
             <img src={LinkedinLogo} alt='' className='linkedin-logo' />
-            <h1>Sign in</h1>
+            <h1 className='heading'>Sign in</h1>
+            <p className='sub-heading'>Stay updated on your professional world</p>
             
-            {/*<div className='auth-inputs'>
+            <div className='auth-inputs'>
                 <input
+                type='email'
                     onChange={(e) => 
                         setCredentials({...credentials, email: e.target.value})
                     }
                     className="common-input" 
-                    placeholder="Enter your Email" 
+                    placeholder="Email or Phone" 
                 />
                 <input
+                    type='password'
                     onChange={(e) =>
                         setCredentials({...credentials, password: e.target.value})
                     }
                     className="common-input" 
-                    placeholder="Enter your Password" 
+                    placeholder="Password" 
                 />
             </div>
-                <button onClick={login} className='login-btn'>Login to LinkedIn</button>*/}
+                <button onClick={login} className='login-btn'>Login to LinkedIn</button>
         </div>
      );
 }
