@@ -53,6 +53,10 @@ const LoginComponent = () => {
                     className='google-btn' 
                     onClick={() => console.log('Google button clicked')} 
                 />
+
+                <p className='go-to-signup'>
+                    New to LinkedIn? <span className='join-now'>Join now</span>
+                </p>
             </div>
         </div>
      );
