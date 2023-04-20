@@ -43,7 +43,7 @@ const LoginComponent = () => {
                     placeholder="Password" 
                 />
             </div>
-                <button onClick={login} className='login-btn'>Login to LinkedIn</button>
+                <button onClick={login} className='login-btn'>Sign in</button>
             </div>
             
         </div>

@@ -1,4 +1,5 @@
-$linkedinBlue: #0072b1;
+$linkedinBlue: #0073b1;
+$linkedinDark: #004c75;
 
 body {
     margin: 0;
@@ -37,10 +38,12 @@ body {
         border-radius: 3px;
         font-family: system-ui;
         font-size: 16px;
+        margin: 10px 0;
     }
 
     .common-input:focus {
-        outline: 1px solid rgb(77,77,196);
+        outline: 1px solid $linkedinBlue;
+        border: none;
     }
 
     ::placeholder {
@@ -51,11 +54,21 @@ body {
 
 .login-btn {
     width: 300px;
-    height: 30px;
+    height: 50px;
     cursor: pointer;
     background-color: $linkedinBlue;
-    color: #fff;
+    color: #ffffff;
     margin-top: 20px;
+    border-radius: 30px;
+    border: none;
+    font-family: system-ui;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 400ms;
+}
+
+.login-btn:hover {
+    background-color: $linkedinDark;
 }
 
 .linkedin-logo {
