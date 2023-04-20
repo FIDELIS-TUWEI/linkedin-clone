@@ -45,7 +45,8 @@ const LoginComponent = () => {
             </div>
                 <button onClick={login} className='login-btn'>Sign in</button>
             </div>
-            
+
+            <hr className='hr-text' data-content='OR' />
         </div>
      );
 }
