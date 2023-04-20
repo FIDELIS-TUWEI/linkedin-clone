@@ -84,6 +84,7 @@ body {
     text-align: center;
     height: 1.5em;
     opacity: .5;
+
     &:before {
         content: '';
         background: linear-gradient(to right, transparent, #818078, transparent);
@@ -103,4 +104,8 @@ body {
         color: #818078;
         background-color: #fcfcfa;
     }
+}
+
+.google-btn {
+    width: 300px !important;
 }

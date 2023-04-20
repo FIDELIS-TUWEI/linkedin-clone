@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { RegisterAPI } from '../api/AuthAPI';
 import '../Sass/LoginComponent.scss';
 import LinkedinLogo from '../assets/linkedinLogo.png'
+import GoogleButton from 'react-google-button';
 
 const LoginComponent = () => {
     //useState
@@ -46,6 +47,13 @@ const LoginComponent = () => {
                 <button onClick={login} className='login-btn'>Sign in</button>
             </div>
                 <hr className='hr-text' data-content='or'/>
+            
+            <div className='login-wrapper-inner'>
+                <GoogleButton
+                    className='google-btn' 
+                    onClick={() => console.log('Google button clicked')} 
+                />
+            </div>
         </div>
      );
 }
