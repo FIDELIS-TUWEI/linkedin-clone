@@ -3,6 +3,7 @@ import { RegisterAPI } from '../api/AuthAPI';
 import '../Sass/LoginComponent.scss';
 import LinkedinLogo from '../assets/linkedinLogo.png'
 import GoogleButton from 'react-google-button';
+import { toast } from 'react-toastify';
 
 const LoginComponent = () => {
     //useState
@@ -12,10 +13,10 @@ const LoginComponent = () => {
     const login = async () => {
         try {
             let res = await RegisterAPI(credentials.email, credentials.password);
-            console.log(res?.user)
+            toast.success('Signed In to LinkedIn!')
         }
         catch (err) {
-            console.log(err)
+            toast.error('Please check your Credentials')
         }  
     }
     return ( 
