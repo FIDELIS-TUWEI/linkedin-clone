@@ -33,7 +33,7 @@ export const RegisterAPI = (email, password) => {
 export const GoogleSignInAPI = () => {
     try {
         let googleProvider = new GoogleAuthProvider();
-        let res = signInWithPopup(googleProvider);
+        let res = signInWithPopup(auth, googleProvider);
         return res;
     }
     catch (err) {
