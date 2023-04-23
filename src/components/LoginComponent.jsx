@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { RegisterAPI } from '../api/AuthAPI';
+import { LoginAPI, GoogleSignInAPI } from '../api/AuthAPI';
 import '../Sass/LoginComponent.scss';
 import LinkedinLogo from '../assets/linkedinLogo.png'
 import GoogleButton from 'react-google-button';
@@ -12,13 +12,20 @@ const LoginComponent = () => {
     //function call
     const login = async () => {
         try {
-            let res = await RegisterAPI(credentials.email, credentials.password);
+            let res = await LoginAPI(credentials.email, credentials.password);
             toast.success('Signed In to LinkedIn!')
         }
         catch (err) {
             toast.error('Please check your Credentials')
         }  
     }
+
+    // google provider sigin
+    const googleSignIn = () => {
+        let response = GoogleSignInAPI();
+        console.log(response);
+    }
+
     return ( 
         <div className='login-wrapper'>
             <img src={LinkedinLogo} alt='' className='linkedin-logo' />
@@ -52,7 +59,7 @@ const LoginComponent = () => {
             <div className='login-wrapper-inner'>
                 <GoogleButton
                     className='google-btn' 
-                    onClick={() => console.log('Google button clicked')} 
+                    onClick={googleSignIn} 
                 />
 
                 <p className='go-to-signup'>
