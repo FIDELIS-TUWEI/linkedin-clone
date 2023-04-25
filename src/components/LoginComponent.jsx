@@ -21,7 +21,8 @@ const LoginComponent = () => {
     const login = async () => {
         try {
             let res = await LoginAPI(credentials.email, credentials.password);
-            toast.success('Signed In to LinkedIn!')
+            toast.success('Signed In to LinkedIn!');
+            navigate('/home');
         }
         catch (err) {
             toast.error('Please check your Credentials')

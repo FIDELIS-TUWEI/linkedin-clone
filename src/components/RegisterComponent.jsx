@@ -20,7 +20,8 @@ const RegisterComponent = () => {
     const login = async () => {
         try {
             let res = await RegisterAPI(credentials.email, credentials.password);
-            toast.success('Account Created!')
+            toast.success('Account Created!');
+            navigate('/home');
         }
         catch (err) {
             toast.error('Cannot create your Account')
