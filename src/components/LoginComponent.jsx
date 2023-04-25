@@ -2,13 +2,17 @@ import { useState } from 'react';
 import { LoginAPI, GoogleSignInAPI } from '../api/AuthAPI';
 import LinkedinLogo from '../assets/linkedinLogo.png'
 import GoogleButton from 'react-google-button';
-import { navigate } from '../helpers/useNavigate';
+import { useNavigate } from 'react-router-dom';
+
 
 import '../Sass/LoginComponent.scss';
 import { toast } from 'react-toastify';
 
 
 const LoginComponent = () => {
+
+    // useNavigate
+    let navigate = useNavigate();
 
     //useState
     const [credentials, setCredentials] = useState();
