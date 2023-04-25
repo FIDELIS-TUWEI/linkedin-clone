@@ -1,11 +1,15 @@
 import { useState } from 'react';
 import { LoginAPI, GoogleSignInAPI } from '../api/AuthAPI';
-import '../Sass/LoginComponent.scss';
 import LinkedinLogo from '../assets/linkedinLogo.png'
 import GoogleButton from 'react-google-button';
+import { navigate } from '../helpers/useNavigate';
+
+import '../Sass/LoginComponent.scss';
 import { toast } from 'react-toastify';
 
+
 const LoginComponent = () => {
+
     //useState
     const [credentials, setCredentials] = useState();
 
@@ -63,7 +67,7 @@ const LoginComponent = () => {
                 />
 
                 <p className='go-to-signup'>
-                    New to LinkedIn? <span className='join-now'>Join now</span>
+                    New to LinkedIn? <span className='join-now' onClick={() => navigate('/register')}>Join now</span>
                 </p>
             </div>
         </div>
