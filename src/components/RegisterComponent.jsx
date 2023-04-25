@@ -31,7 +31,7 @@ const RegisterComponent = () => {
     // google provider sigin
     const googleSignIn = () => {
         let response = GoogleSignInAPI();
-        console.log(response);
+        navigate('/home');
     }
 
     return ( 
