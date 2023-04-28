@@ -8,12 +8,10 @@ const Home = () => {
     // useEffect Hook
     useEffect(() => {
         onAuthStateChanged(auth, (res) => {
-            console.log(res)
+            console.log(res?.accessToken)
         });
     }, []);
-    return ( 
-        <HomeComponent />
-     );
+    return <HomeComponent />
 }
  
 export default Home;
