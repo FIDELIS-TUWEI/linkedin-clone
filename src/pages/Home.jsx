@@ -1,11 +1,14 @@
 import HomeComponent from "../components/HomeComponent";
 import { onAuthStateChanged } from "firebase/auth";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { auth } from "../firebaseConfig";
 import { useNavigate } from "react-router-dom";
 import Loader from "../components/common/Loader";
 
 const Home = () => {
+
+    // state hook for loading spinner
+    const [loading, setLoading] = useState(true)
 
     // navigate hook
     let navigate = useNavigate();
@@ -17,11 +20,11 @@ const Home = () => {
                 navigate("/")
             }
             else {
-                return <Loader />
+                setLoading(false)
             }
         });
     }, []);
-    return <HomeComponent />
+    return loading ? <Loader /> : <HomeComponent />
 }
  
 export default Home;
