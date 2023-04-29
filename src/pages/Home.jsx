@@ -3,6 +3,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { useEffect } from "react";
 import { auth } from "../firebaseConfig";
 import { useNavigate } from "react-router-dom";
+import Loader from "../components/common/Loader";
 
 const Home = () => {
 
@@ -14,6 +15,9 @@ const Home = () => {
         onAuthStateChanged(auth, (res) => {
             if(!res?.accessToken) {
                 navigate("/")
+            }
+            else {
+                return <Loader />
             }
         });
     }, []);
