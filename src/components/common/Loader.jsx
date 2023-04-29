@@ -1,10 +1,14 @@
 import { Space, Spin } from 'antd';
+import './common.scss'
 
 const Loader = () => {
     return ( 
-        <Space size="middle">
-            <Spin size="large" />
-        </Space>
+        <div className="loader">
+            Loading...please wait...
+            <Space size="middle">
+                <Spin size="large" />
+            </Space>
+        </div>  
      );
 }
  
