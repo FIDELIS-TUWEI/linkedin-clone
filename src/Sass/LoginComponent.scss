@@ -8,7 +8,10 @@ body {
 
 .login-wrapper {
     .login-wrapper-inner {
-        margin-left: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .heading {
