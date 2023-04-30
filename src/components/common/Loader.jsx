@@ -4,7 +4,7 @@ import './common.scss'
 const Loader = () => {
     return ( 
         <div className="loader">
-            Loading...please wait...
+            <p>Loading...please wait...</p>
             <Space size="middle">
                 <Spin size="large" />
             </Space>
