@@ -2,7 +2,9 @@ import './index.scss'
 
 const TopBar = () => {
     return ( 
-        <></>
+        <div>
+            Topbar
+        </div>
      );
 }
  
