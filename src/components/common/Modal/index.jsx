@@ -1,7 +1,7 @@
 import './index.scss'
 import { Modal, Button } from 'antd';
 
-const ModalComponent = ({modalOpen, setModalOpen, setStatus}) => {
+const ModalComponent = ({modalOpen, setModalOpen, status, setStatus}) => {
     return ( 
         <>
             <Modal
@@ -11,7 +11,7 @@ const ModalComponent = ({modalOpen, setModalOpen, setStatus}) => {
                 onOk={() => setModalOpen(false)}
                 onCancel={() => setModalOpen(false)}
                 footer={[
-                    <Button key="submit" type='primary' disabled>
+                    <Button key="submit" type='primary' disabled={status.length > 0 ? false : true}>
                         Post
                     </Button>,
                 ]}
@@ -20,6 +20,8 @@ const ModalComponent = ({modalOpen, setModalOpen, setStatus}) => {
                     className='modal-input' 
                     type="text" 
                     placeholder='What do you want to talk about?' 
+                    onChange={(e) => setStatus(e.target.value)}
+                    value={status}
                 />
             </Modal>
         </>

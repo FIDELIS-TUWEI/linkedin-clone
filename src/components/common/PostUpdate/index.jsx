@@ -17,7 +17,12 @@ const PostStatus = () => {
             </div>
 
             {/* Modal Component rendered */}
-            <ModalComponent setStatus={setStatus} modalOpen={modalOpen} setModalOpen={setModalOpen} />
+            <ModalComponent 
+                status={status}
+                setStatus={setStatus} 
+                modalOpen={modalOpen} 
+                setModalOpen={setModalOpen} 
+            />
         </div>
      );
 }
