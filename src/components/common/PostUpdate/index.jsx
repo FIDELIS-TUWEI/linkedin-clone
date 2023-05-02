@@ -12,8 +12,10 @@ const PostStatus = () => {
     const [status, setStatus] = useState("");
 
     // send status to firebase db
-    const sendStatus = () => {
-        StatusPost(status);
+    const sendStatus = async () => {
+        await StatusPost(status);
+        await setModalOpen(false);
+        await setStatus("")
     };
 
     return ( 
