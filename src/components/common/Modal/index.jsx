@@ -1,7 +1,7 @@
 import './index.scss'
 import { Modal, Button } from 'antd';
 
-const ModalComponent = ({modalOpen, setModalOpen}) => {
+const ModalComponent = ({modalOpen, setModalOpen, setStatus}) => {
     return ( 
         <>
             <Modal

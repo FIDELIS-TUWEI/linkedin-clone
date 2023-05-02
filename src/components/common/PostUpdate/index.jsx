@@ -6,7 +6,7 @@ const PostStatus = () => {
 
     // state for opening modal
     const [modalOpen, setModalOpen] = useState(false);
-    
+
     // state for post btn event
     const [status, setStatus] = useState("")
 
@@ -17,7 +17,7 @@ const PostStatus = () => {
             </div>
 
             {/* Modal Component rendered */}
-            <ModalComponent modalOpen={modalOpen} setModalOpen={setModalOpen} />
+            <ModalComponent setStatus={setStatus} modalOpen={modalOpen} setModalOpen={setModalOpen} />
         </div>
      );
 }
