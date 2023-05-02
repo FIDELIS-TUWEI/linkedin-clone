@@ -8,7 +8,12 @@ const PostStatus = () => {
     const [modalOpen, setModalOpen] = useState(false);
 
     // state for post btn event
-    const [status, setStatus] = useState("")
+    const [status, setStatus] = useState("");
+
+    // send status to firebase db
+    const sendStatus = () => {
+
+    };
 
     return ( 
         <div className='post-status-main'>
@@ -22,6 +27,7 @@ const PostStatus = () => {
                 setStatus={setStatus} 
                 modalOpen={modalOpen} 
                 setModalOpen={setModalOpen} 
+                sendStatus={sendStatus}
             />
         </div>
      );

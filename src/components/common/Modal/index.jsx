@@ -1,7 +1,7 @@
 import './index.scss'
 import { Modal, Button } from 'antd';
 
-const ModalComponent = ({modalOpen, setModalOpen, status, setStatus}) => {
+const ModalComponent = ({modalOpen, setModalOpen, status, setStatus, sendStatus}) => {
     return ( 
         <>
             <Modal
@@ -11,7 +11,11 @@ const ModalComponent = ({modalOpen, setModalOpen, status, setStatus}) => {
                 onOk={() => setModalOpen(false)}
                 onCancel={() => setModalOpen(false)}
                 footer={[
-                    <Button key="submit" type='primary' disabled={status.length > 0 ? false : true}>
+                    <Button 
+                        onClick={sendStatus}
+                        key="submit" 
+                        type='primary' 
+                        disabled={status.length > 0 ? false : true}>
                         Post
                     </Button>,
                 ]}
