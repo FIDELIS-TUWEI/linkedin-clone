@@ -1,5 +1,5 @@
 import './index.scss'
-import { Modal } from 'antd';
+import { Modal, Button } from 'antd';
 
 const ModalComponent = ({modalOpen, setModalOpen}) => {
     return ( 
@@ -10,6 +10,11 @@ const ModalComponent = ({modalOpen, setModalOpen}) => {
                 open={modalOpen}
                 onOk={() => setModalOpen(false)}
                 onCancel={() => setModalOpen(false)}
+                footer={[
+                    <Button key="submit" type='primary' disabled>
+                        Post
+                    </Button>,
+                ]}
             >
                 <input 
                     className='modal-input' 
