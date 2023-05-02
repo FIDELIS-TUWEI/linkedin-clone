@@ -6,6 +6,9 @@ const PostStatus = () => {
 
     // state for opening modal
     const [modalOpen, setModalOpen] = useState(false);
+    
+    // state for post btn event
+    const [status, setStatus] = useState("")
 
     return ( 
         <div className='post-status-main'>
