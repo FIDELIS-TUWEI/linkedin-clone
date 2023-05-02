@@ -1,6 +1,11 @@
+import '../Sass/HomeComponent.scss'
+import PostStatus from "./common/PostUpdate";
+
 const HomeComponent = () => {
     return ( 
-        <>HomeComponent</>
+        <div className="home-component">
+            <PostStatus />
+        </div>
      );
 }
  
