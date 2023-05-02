@@ -1,6 +1,7 @@
 import './index.scss'
 import { useState } from 'react';
 import ModalComponent from '../Modal';
+import { StatusPost } from '../../../api/FirestoreAPI';
 
 const PostStatus = () => {
 
@@ -12,7 +13,7 @@ const PostStatus = () => {
 
     // send status to firebase db
     const sendStatus = () => {
-
+        StatusPost(status);
     };
 
     return ( 
