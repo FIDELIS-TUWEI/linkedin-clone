@@ -10,7 +10,7 @@ export const StatusPost = (status) => {
         status: status
     }
     addDoc(dbRef, object)
-    .then((res) => {
+    .then(() => {
         toast.success("Document added succesfully")
     })
     .catch((err) => {
