@@ -1,7 +1,7 @@
 import './index.scss'
 import { useState, useMemo } from 'react';
 import ModalComponent from '../Modal';
-import { StatusPost, getPosts } from '../../../api/FirestoreAPI';
+import { StatusPost, getStatus } from '../../../api/FirestoreAPI';
 
 const PostStatus = () => {
 
@@ -20,7 +20,7 @@ const PostStatus = () => {
 
     // useMemo hook
     useMemo(() => {
-        getPosts();
+        getStatus();
     }, []);
 
     return ( 
