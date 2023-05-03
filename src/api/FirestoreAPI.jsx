@@ -19,7 +19,7 @@ export const StatusPost = (status) => {
 }
 
 // Reading posts from firebase db
-export const getPosts = () => {
+export const getStatus = () => {
     onSnapshot(dbRef, (response) => {
         console.log(response.docs.map((docs) => {
             return { ...docs.data(), id : docs.id }
