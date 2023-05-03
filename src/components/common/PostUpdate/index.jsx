@@ -1,7 +1,7 @@
 import './index.scss'
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import ModalComponent from '../Modal';
-import { StatusPost } from '../../../api/FirestoreAPI';
+import { StatusPost, getPosts } from '../../../api/FirestoreAPI';
 
 const PostStatus = () => {
 
@@ -17,6 +17,11 @@ const PostStatus = () => {
         await setModalOpen(false);
         await setStatus("")
     };
+
+    // useMemo hook
+    useMemo(() => {
+        getPosts();
+    }, []);
 
     return ( 
         <div className='post-status-main'>
