@@ -1,5 +1,5 @@
 import { firestore } from '../firebaseConfig';
-import { addDoc, collection } from 'firebase/firestore';
+import { addDoc, collection, onSnapshot } from 'firebase/firestore';
 import { toast } from 'react-toastify';
 
 // firestore db collection reference
@@ -16,4 +16,9 @@ export const StatusPost = (status) => {
     .catch((err) => {
         console.log(err)
     });
+}
+
+// Reading posts from firebase db
+export const getPosts = () => {
+    onSnapshot(dbRef, response)
 }
