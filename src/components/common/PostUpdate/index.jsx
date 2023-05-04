@@ -40,6 +40,17 @@ const PostStatus = () => {
                 setModalOpen={setModalOpen} 
                 sendStatus={sendStatus}
             />
+
+            {/* Map allStatus for display in the UI */}
+            <div>
+                {allStatus.map((posts) => {
+                    return (
+                        <>
+                            <p>{posts.status}</p>
+                        </>
+                    )
+                })}
+            </div>
         </div>
      );
 }
