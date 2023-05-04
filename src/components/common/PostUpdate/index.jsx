@@ -3,6 +3,7 @@ import { useState, useMemo } from 'react';
 import ModalComponent from '../Modal';
 import { StatusPost, getStatus } from '../../../api/FirestoreAPI';
 import PostsCard from '../PostsCard';
+import { getCurrentTimeStamp } from '../../../helpers/useMoment';
 
 const PostStatus = () => {
 
@@ -17,7 +18,12 @@ const PostStatus = () => {
 
     // send status to firebase db
     const sendStatus = async () => {
-        await StatusPost(status);
+        // timestamp
+        let object = {
+            status: status,
+            timeStamp: getCurrentTimeStamp(("LLL"))
+        }
+        await StatusPost(object);
         await setModalOpen(false);
         await setStatus("")
     };
