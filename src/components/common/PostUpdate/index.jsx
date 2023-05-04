@@ -7,6 +7,9 @@ import { getCurrentTimeStamp } from '../../../helpers/useMoment';
 
 const PostStatus = () => {
 
+    // useEmail from localstorage
+    let userEmail = localStorage.getItem("userEmail")
+
     // state for opening modal
     const [modalOpen, setModalOpen] = useState(false);
 
@@ -21,7 +24,8 @@ const PostStatus = () => {
         // timestamp
         let object = {
             status: status,
-            timeStamp: getCurrentTimeStamp(("LLL"))
+            timeStamp: getCurrentTimeStamp(("LLL")),
+            userEmail : userEmail,
         }
         await StatusPost(object);
         await setModalOpen(false);
