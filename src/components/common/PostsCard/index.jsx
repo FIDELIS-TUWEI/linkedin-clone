@@ -1,6 +1,10 @@
-const PostsCard = () => {
+import './index.scss'
+
+const PostsCard = ({posts}) => {
     return ( 
-        <div>PostsCard</div>
+        <div className='posts-card'>
+            <p>{posts.status}</p>
+        </div>
      );
 }
  

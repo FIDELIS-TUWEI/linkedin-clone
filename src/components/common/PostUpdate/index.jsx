@@ -2,6 +2,7 @@ import './index.scss'
 import { useState, useMemo } from 'react';
 import ModalComponent from '../Modal';
 import { StatusPost, getStatus } from '../../../api/FirestoreAPI';
+import PostsCard from '../PostsCard';
 
 const PostStatus = () => {
 
@@ -44,11 +45,7 @@ const PostStatus = () => {
             {/* Map allStatus for display in the UI */}
             <div>
                 {allStatus.map((posts) => {
-                    return (
-                        <>
-                            <p>{posts.status}</p>
-                        </>
-                    )
+                    return <PostsCard posts={posts} />
                 })}
             </div>
         </div>
