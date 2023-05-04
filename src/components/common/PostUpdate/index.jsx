@@ -11,6 +11,9 @@ const PostStatus = () => {
     // state for post btn event
     const [status, setStatus] = useState("");
 
+    // allStatus state from db
+    const [allStatus, setAllstatus] = useState([])
+
     // send status to firebase db
     const sendStatus = async () => {
         await StatusPost(status);
@@ -18,9 +21,9 @@ const PostStatus = () => {
         await setStatus("")
     };
 
-    // useMemo hook
+    // useMemo hook to getStatus from firebase db
     useMemo(() => {
-        getStatus();
+        getStatus(setAllstatus);
     }, []);
 
     return ( 
