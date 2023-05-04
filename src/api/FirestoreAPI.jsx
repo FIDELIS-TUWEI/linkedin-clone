@@ -5,10 +5,7 @@ import { toast } from 'react-toastify';
 // firestore db collection reference
 let dbRef = collection(firestore, "posts");
 
-export const StatusPost = (status) => {
-    let object = {
-        status: status
-    }
+export const StatusPost = (object) => {
     addDoc(dbRef, object)
     .then(() => {
         toast.success("Document added succesfully")
