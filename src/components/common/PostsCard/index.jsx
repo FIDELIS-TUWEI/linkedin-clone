@@ -3,7 +3,7 @@ import './index.scss'
 const PostsCard = ({posts}) => {
     return ( 
         <div className='posts-card'>
-            <p>{posts.status}</p>
+            <p className='status'>{posts.status}</p>
         </div>
      );
 }
